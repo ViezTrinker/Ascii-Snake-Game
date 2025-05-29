@@ -108,7 +108,7 @@ void Snake::Print(void) const
 	}
 }
 
-bool Snake::IsGameRunning(void)
+bool Snake::IsGameRunning(void) const
 {
 	return _isGameRunning;
 }
@@ -154,28 +154,28 @@ void Snake::Input(void)
 		{
 			int arrow = _getch();
 			switch (arrow) { // the real value
-			case 72:
+			case Up:
 				if (_direction == Direction::Down)
 				{
 					break;
 				}
 				_direction = Direction::Up;
 				break;
-			case 80:
+			case Down:
 				if (_direction == Direction::Up)
 				{
 					break;
 				}
 				_direction = Direction::Down;
 				break;
-			case 77:
+			case Right:
 				if (_direction == Direction::Left || _direction == Direction::NoDirection)
 				{
 					break;
 				}
 				_direction = Direction::Right;
 				break;
-			case 75:
+			case Left:
 				if (_direction == Direction::Right)
 				{
 					break;

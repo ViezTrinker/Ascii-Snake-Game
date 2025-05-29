@@ -22,6 +22,11 @@ inline constexpr char Tail = 'o';
 inline constexpr char Wall = '#';
 inline constexpr char Food = '+';
 
+inline constexpr uint16_t Up = 72;
+inline constexpr uint16_t Left = 75;
+inline constexpr uint16_t Right = 77;
+inline constexpr uint16_t Down = 80;
+
 static_assert(StartLength < Width - 2);
 
 class Snake
@@ -29,7 +34,7 @@ class Snake
 public:
 	Snake();
 
-	bool IsGameRunning(void);
+	bool IsGameRunning(void) const;
 
 	void Print(void) const;
 	void Input(void);
