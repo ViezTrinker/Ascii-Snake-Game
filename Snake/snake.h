@@ -15,7 +15,7 @@ enum class EnableWallDeath : bool
 inline constexpr size_t Width = 25;
 inline constexpr size_t Height = 25;
 inline constexpr uint16_t StartLength = 4;
-inline constexpr double DelayMs = 250;
+inline constexpr uint32_t DelayMs = 250;
 inline constexpr EnableWallDeath Enabler = EnableWallDeath::No;
 inline constexpr char Head = 'O';
 inline constexpr char Tail = 'o';
