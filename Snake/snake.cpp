@@ -45,7 +45,7 @@ Snake::Snake(void)
 
 }
 
-void Snake::Print(void)
+void Snake::Print(void) const
 {
 	// Clear console
 	system("cls");
@@ -113,11 +113,11 @@ bool Snake::IsGameRunning(void)
 	return _isGameRunning;
 }
 
-uint16_t Snake::GenerateRandomInteger(uint16_t start, uint16_t begin)
+uint16_t Snake::GenerateRandomInteger(uint16_t start, uint16_t end)
 {
 	std::random_device rd;
 	std::mt19937 gen(rd());
-	std::uniform_int_distribution<> distrib(start, begin);
+	std::uniform_int_distribution<> distrib(start, end);
 
 	uint16_t randomNumber = distrib(gen);
 	return randomNumber;

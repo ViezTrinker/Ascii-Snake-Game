@@ -31,7 +31,7 @@ public:
 
 	bool IsGameRunning(void);
 
-	void Print(void);
+	void Print(void) const;
 	void Input(void);
 	void Logic(void);
 private:
@@ -50,7 +50,7 @@ private:
 		NoDirection = 4
 	};
 
-	uint16_t GenerateRandomInteger(uint16_t start, uint16_t begin);
+	uint16_t GenerateRandomInteger(uint16_t start, uint16_t end);
 	Position GenerateRandomPosition(void);
 
 	void MoveSnake(void);
